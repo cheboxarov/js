@@ -29,7 +29,7 @@ const CONST_A = 1
 var_a = 228
 console.log(CONST_A, var_a)
 
-console.log(console.log(10)) // нихуя не выведет хех
+// console.log(console.log(10)) // нихуя не выведет хех
 
 a = {
     "a": 10,
