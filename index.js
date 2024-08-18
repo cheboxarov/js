@@ -62,3 +62,11 @@ human = {
 human.say_age = function(){ console.log("Мне ", this.age, " лет!"); }
 
 human.say_age()
+
+json_human = JSON.stringify(human)
+
+console.log(json_human);
+
+unjson_human = JSON.parse(json_human)
+
+console.log(unjson_human)
