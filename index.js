@@ -63,10 +63,57 @@ human.say_age = function(){ console.log("Мне ", this.age, " лет!"); }
 
 human.say_age()
 
-json_human = JSON.stringify(human)
+json_human = JSON.stringify(human) // jsobject -> json
 
 console.log(json_human);
 
-unjson_human = JSON.parse(json_human)
+unjson_human = JSON.parse(json_human) // json -> jsobject
 
 console.log(unjson_human)
+
+const c = 10
+
+let b = c
+
+b = 30
+
+console.log(c)
+console.log(b)
+
+const gl_a = 5;
+
+function outerFn(...args) {
+    function innerFn(args) {
+        console.log(gl_a, ...args)
+    }
+    return innerFn(args)
+}
+
+outerFn(a=1,2,2,3,4)
+
+j = true
+
+console.log(!j || j && !j)
+
+name = "Alice"
+alice_age = 19
+
+console.log(`${name} ${alice_age}`)
+
+
+function funcWithCallback(callback) {
+    return callback()
+}
+
+console.log(funcWithCallback(function(){console.log("Callback function"); return 1}))
+
+function defMultiplier() {
+    return 1
+}
+
+function multiplyByFactor(value, multiplier = defMultiplier()) {
+    return value * multiplier
+}
+
+console.log(multiplyByFactor(multiplyByFactor(100, multiplyByFactor(100)), 2))
+
